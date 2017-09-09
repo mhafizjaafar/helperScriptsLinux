@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo
+echo "Launching dropbox..."
+dropbox start
+echo
+echo "Beginning to watch the status..."
+watch -n 0,5 dropbox status
+
+echo "Terminated the watch."
+
+echo "Stopping dropbox..."
+dropbox stop
+
+echo "Disabling autostarting of dropbox..."
+dropbox autostart n
+echo "End."
+echo
