@@ -5,6 +5,7 @@ echo "Launching dropbox..."
 dropbox start
 echo
 echo "Beginning to watch the status..."
+# The comma here is used as the decimal point. Replace it with dot at your convenience.
 watch -n 0,5 dropbox status
 
 echo "Terminated the watch."
