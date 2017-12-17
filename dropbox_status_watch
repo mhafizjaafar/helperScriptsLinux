@@ -2,18 +2,18 @@
 
 echo
 echo "Launching dropbox..."
-dropbox start
+caja-dropbox start
 echo
 echo "Beginning to watch the status..."
 # The comma here is used as the decimal point. Replace it with dot at your convenience.
-watch -n 0,5 dropbox status
+watch -n 0,5 caja-dropbox status
 
 echo "Terminated the watch."
 
 echo "Stopping dropbox..."
-dropbox stop
+caja-dropbox stop
 
 echo "Disabling autostarting of dropbox..."
-dropbox autostart n
+caja-dropbox autostart n
 echo "End."
 echo
