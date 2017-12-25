@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo
-echo "[git remote]"
+echo "[Inquiring repository origin]"
 echo "Going into every directory here."
 echo
 
@@ -23,5 +23,5 @@ do
 		git remote -v
 		echo
 		cd ../
-		fi
+	fi
 done
