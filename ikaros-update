@@ -1,0 +1,13 @@
+#!/bin/bash
+
+x=$PWD
+p=~/projects/ikaros-code
+
+echo
+echo "Updating $p"
+echo
+
+cd $p
+git remote update && git pull
+
+echo && echo "DONE"
