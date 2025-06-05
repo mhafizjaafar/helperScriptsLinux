@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# getting the value of this variable defined in our .bashrc
+p=$(grep '^path2middlewareConfiguration=' ~/.bashrc | cut -d'=' -f2-)
+
+for x in $p/*
+do
+a=$x/$1/application.properties
+if [ -e $a ]
+then
+	echo "### $x/$1 ###"
+	grep --color $2 $a
+fi
+done
