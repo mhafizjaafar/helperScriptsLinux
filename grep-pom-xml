@@ -1,0 +1,18 @@
+#!/bin/bash
+
+keyWord=0
+
+read -p "Target keyword: " keyWord
+
+for x in *
+do
+echo "========"
+a=$x/pom.xml
+	if [ -e $a ]
+	then
+		echo "In dir: $x"
+		grep --color $keyWord $a
+	else
+		echo "$x - No pom.xml"
+	fi
+done

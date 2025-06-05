@@ -1,0 +1,15 @@
+#!/bin/bash
+
+x=$PWD
+p=~/projects/environment-properties
+
+cd $p
+for x in *
+do
+a=$x/$1/application.properties
+if [ -e $a ]
+then
+	echo "### $x/$1 ###"
+	grep --color $2 $a
+fi
+done
