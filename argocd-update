@@ -8,6 +8,7 @@ echo "Updating $p"
 echo
 
 cd $p
+git status
 git remote update && git pull
 
 echo && echo "DONE"
