@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Arg 1: environment dev|qa|preprod|prod
+# Arg 2: property
+
 x=$PWD
 p=~/projects/environment-properties
 

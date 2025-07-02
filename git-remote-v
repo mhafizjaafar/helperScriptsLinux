@@ -7,10 +7,8 @@ echo
 
 for x in *;
 do
-  if [ -d "${x}" ]
+  if [ -e "${x}"/.git ]
   then
-    if  [ -e "${x}"/.git ]
-    then
       cd "${x}"
       echo "${x}"
       echo "======================"
@@ -18,6 +16,5 @@ do
       git remote -v
       echo
       cd ../
-    fi
   fi
 done
