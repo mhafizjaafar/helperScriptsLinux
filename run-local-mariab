@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Running the local-mariadb."
+docker run -p 127.0.0.1:3306:3306 --name local-mariadb -e MYSQL_ROOT_PASSWORD=root -d mariadb:latest
+echo "Done."
+docker ps
