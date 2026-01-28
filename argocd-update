@@ -2,7 +2,7 @@
 
 x=$PWD
 p=~/projects/argocd
-p-universum=~/projects/argocd-universum
+pUniversum=~/projects/argocd-universum
 
 echo
 echo "Updating $p"
@@ -14,9 +14,9 @@ git remote update && git pull
 
 echo && echo "DONE updating: $p"
 
-echo && echo "Updating ${p-universum}"
+echo && echo "Updating $pUniversum"
 echo
 
-cd ${p-universum}
+cd $pUniversum
 git status
 git remote update && git pull
