@@ -1,0 +1,20 @@
+#!/bin/bash
+x=$PWD
+p=~/projects/unzer-aws
+
+cd $p
+for y in *
+do
+	a=$y/.git
+	if [ -e $a ]
+	then
+		echo "### Updating $a ###"
+		cd $y
+		git status
+		git remote update && git pull
+		echo && echo "### DONE updating: $x ###"
+		cd ../
+	fi
+done
+
+cd $x
