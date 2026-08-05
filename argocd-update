@@ -5,18 +5,18 @@ p=~/projects/argocd
 pUniversum=~/projects/argocd-universum
 
 echo
-echo "Updating $p"
-echo
-
-cd $p
-git status
-git remote update && git pull
-
-echo && echo "DONE updating: $p"
-
-echo && echo "Updating $pUniversum"
+echo "Updating $pUniversum"
 echo
 
 cd $pUniversum
+git status
+git remote update && git pull
+
+echo && echo "DONE updating: $pUniversum"
+
+echo && echo "Updating $p"
+echo
+
+cd $p
 git status
 git remote update && git pull
