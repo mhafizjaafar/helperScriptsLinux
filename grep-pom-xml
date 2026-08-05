@@ -12,7 +12,5 @@ a=$x/pom.xml
 	then
 		echo "In dir: $x"
 		grep --color $keyWord $a
-	else
-		echo "$x - No pom.xml"
 	fi
 done
