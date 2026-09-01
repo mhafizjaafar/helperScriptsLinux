@@ -12,7 +12,7 @@ do
 		cd $y
 		git status
 		git remote update && git pull
-		echo && echo "### DONE updating: $x ###"
+		echo && echo "### DONE updating: $y ###"
 		cd ../
 	fi
 done
