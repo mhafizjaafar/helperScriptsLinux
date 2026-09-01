@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Arg 1: environment int|test|prod
+# Arg 2: property
+
+origin=$PWD
+p=~/projects/argocd-universum
+
+cd $p/unzer-aws-universum-$1/unzer-aws-universum-$1-eks/apps/debtcollection
+for x in *
+do
+a=$x/app.yaml
+if [ -e $a ]
+then
+	echo "### $1/$x ###"
+	grep --color $2 $a
+fi
+done
+
+cd $origin
