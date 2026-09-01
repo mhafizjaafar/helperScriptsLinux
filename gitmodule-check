@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Arg 1: module
+
+x=$PWD
+p=~/projects
+
+cd $p
+for x in *
+do
+a=$x/.gitmodules
+if [ -e $a ]
+then
+	echo "### $x ###"
+	grep --color $1 $a
+fi
+done
