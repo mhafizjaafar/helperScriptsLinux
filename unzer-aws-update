@@ -12,9 +12,10 @@ do
 		cd $y
 		git status
 		git remote update && git pull
-		echo && echo "### DONE updating: $y ###"
+		echo "#==# DONE updating: $y #==#" && echo
 		cd ../
 	fi
 done
 
 cd $x
+echo "==== All done ===="
